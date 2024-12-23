@@ -21,39 +21,93 @@ body {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
 }
-
+/* HEADER */
 .header {
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 2fr 3fr;
     background-color: #15616d;
     color: #ffecd1;
+    box-shadow: rgba(21, 97, 109, 0.24) 0px 7px 4px;
 }
 #search {
     width: 80%;
+    height: 50%;
+    border-radius: 10px;
 }
+
 body > div > div.header > div.top-header > div.top-header-input > label {
-    width: 36px;
+    width: 32px;
+    padding: 0px;
+    margin: 0px;
+    height: 32px;
 }
 .top-header {
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
-.top-header-input,
+.top-header-input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-top: 10px;
+}
 .top-header-text {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
-
+    margin-top: 10px;
+    gap: 8px;
+    padding-right: 16px;
 }
 
+.first-row__profile-img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
 .bottom-header {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    
 }
-
+.bottom-header-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+}
+.smaller {
+    font-size: 1rem;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 16px;
+    gap: 5px;
+    border: none;
+    cursor: pointer;
+}
+.button-item {
+    height: 40px;
+    border-radius: 20px;
+    color: #ffecd1;
+    background-color: #001524;
+    box-shadow: none;
+    appearance: none;
+}
+.button-item:hover{
+    color:#001524;
+    background-color:#ffecd1;
+}
 .sidebar {
     grid-row: 1 / 3;
     display: grid;
@@ -82,7 +136,7 @@ ul {
 .sidebar__logo-text {
     font-family: "Bebas Neue", serif;
     display: inline;
-    font-size: 2.7vw;
+    font-size: max(32px, 2.7vw);
     margin-bottom: 5px;
     color: #ffecd1;
 }
@@ -100,6 +154,7 @@ ul li {
     grid-template-rows: 1fr 9fr 10fr;
     grid-template-columns: 15fr 6fr;
     padding: 15px;
+    background-color: #ffecd1;
 }
 
 .card-container {
